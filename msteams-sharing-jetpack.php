@@ -35,7 +35,7 @@ class MSTeams_Button {
 
 	// Add the Microsoft Teams Button to the list of services in Sharedaddy
 	public function inject_service ( $services ) {
-		include_once 'class.msteams-sharing-jetpack.php';
+		include_once 'class.teams-sharing-jetpack.php';
 		if ( class_exists( 'Share_MSTeams' ) ) {
 			$services['msteams'] = 'Share_MSTeams';
 		}
