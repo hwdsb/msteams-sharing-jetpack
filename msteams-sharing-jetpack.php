@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: Microsoft Teams sharing for Jetpack
+ * Plugin Name: Microsoft Teams Sharing for Jetpack
  * Plugin URI: https://dev.commons.hwdsb.on.ca
  * Description: Add a Microsoft Teams button to the Jetpack Sharing module
  * Author: mrjarbenne
