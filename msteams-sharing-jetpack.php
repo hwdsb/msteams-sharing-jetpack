@@ -10,7 +10,7 @@
  * Text Domain: mstjp
  */
 
-class Vkcom_Button {
+class MSTeams_Button {
 	private static $instance;
 
 	static function get_instance() {
