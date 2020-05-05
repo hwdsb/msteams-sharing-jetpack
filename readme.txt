@@ -1,4 +1,4 @@
-=== Vk.com sharing for Jetpack ===
+=== Microsoft Teams Sharing for Jetpack ===
 Contributors: mrjarbenne
 Tags: WordPress.com, Jetpack, sharing, Microsoft Teams
 Requires at least: 4.1.1
