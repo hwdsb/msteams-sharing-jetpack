@@ -3,8 +3,8 @@
 if ( class_exists( 'Share_Twitter' ) && ! class_exists( 'Share_MSTeams' ) ) :
 
 // Build button
-class Share_VKcom extends Share_Twitter {
-	var $shortname = 'vkcom';
+class Share_MSTeams extends Share_Twitter {
+	var $shortname = 'msteams';
 	public function __construct( $id, array $settings ) {
 		parent::__construct( $id, $settings );
 		$this->smart = 'official' == $this->button_style;
@@ -47,12 +47,7 @@ class Share_VKcom extends Share_Twitter {
 	}
 
 	public function get_display( $post ) {
-		if ( $this->smart ) {
-			return '<a href="http://www.scoop.it" class="scoopit-button" scit-position="horizontal" scit-url="' . get_permalink( $post->ID ) . '" >Scoop.it</a>';
-		} else if ( $this->icon ) {
-			return '<a target="_blank" rel="nofollow" class="share-scoopit sd-button share-icon" href="https://www.scoop.it/bookmarklet?url='. get_permalink( $post->ID ) .'"><span></span></a>';
-		} else {
-			return '<a target="_blank" rel="nofollow" class="share-scoopit sd-button share-icon" href="https://www.scoop.it/bookmarklet?url='. get_permalink( $post->ID ) .'"><span>Scoop.it</span></a>';
+			return '<a target="_blank" rel="nofollow" class="share-msteams sd-button share-icon" href="https://teams.microsoft.com/share?href='. get_permalink( $post->ID ) .'"><span>Microsoft Teams</span></a>';
 		}
 	}
 
