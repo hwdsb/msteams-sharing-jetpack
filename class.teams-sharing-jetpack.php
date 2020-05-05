@@ -47,6 +47,12 @@ class Share_MSTeams extends Share_Twitter {
 	}
 
 	public function get_display( $post ) {
+
+		if ( $this->smart ) {
+			return '<a href="https://teams.microsoft.com/share/" class="teams-share-button" data-icon-px-size="16" data-href="' . get_permalink( $post->ID ) . '" >Microsoft Teams</a>';
+		} else if ( $this->icon ) {
+			return '<a target="_blank" rel="nofollow" class="share-msteams sd-button share-icon" href="https://teams.microsoft.com/share?href='. get_permalink( $post->ID ) .'"><span></span></a>';
+		} else {
 			return '<a target="_blank" rel="nofollow" class="share-msteams sd-button share-icon" href="https://teams.microsoft.com/share?href='. get_permalink( $post->ID ) .'"><span>Microsoft Teams</span></a>';
 		}
 	}
