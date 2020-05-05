@@ -1,13 +1,13 @@
 <?php
 /*
- * Plugin Name: vk.com sharing for Jetpack
- * Plugin URI: http://wordpress.org/plugins/vk-sharing-jetpack/
- * Description: Add a vk.com button to the Jetpack Sharing module
- * Author: Jeremy Herve
- * Version: 1.2.3
- * Author URI: http://jeremy.hu
+ * Plugin Name: Microsoft Teams sharing for Jetpack
+ * Plugin URI: https://dev.commons.hwdsb.on.ca
+ * Description: Add a Microsoft Teams button to the Jetpack Sharing module
+ * Author: mrjarbenne
+ * Version: 1.0
+ * Author URI: https://mrjarbenne.ca
  * License: GPL2+
- * Text Domain: vkjp
+ * Text Domain: mstjp
  */
 
 class Vkcom_Button {
@@ -15,7 +15,7 @@ class Vkcom_Button {
 
 	static function get_instance() {
 		if ( ! self::$instance )
-			self::$instance = new Vkcom_Button;
+			self::$instance = new MSTeams_Button;
 
 		return self::$instance;
 	}
@@ -33,11 +33,11 @@ class Vkcom_Button {
 		add_filter( 'sharing_services', array( $this, 'inject_service' ) );
 	}
 
-	// Add the Vk.com Button to the list of services in Sharedaddy
+	// Add the Microsoft Teams Button to the list of services in Sharedaddy
 	public function inject_service ( $services ) {
-		include_once 'class.vk-sharing-jetpack.php';
-		if ( class_exists( 'Share_VKcom' ) ) {
-			$services['vkcom'] = 'Share_VKcom';
+		include_once 'class.msteams-sharing-jetpack.php';
+		if ( class_exists( 'Share_MSTeams' ) ) {
+			$services['msteams'] = 'Share_MSTeams';
 		}
 		return $services;
 	}
@@ -45,14 +45,14 @@ class Vkcom_Button {
 	// Prompt to install Jetpack
 	public function install_jetpack() {
 		echo '<div class="error"><p>';
-		printf(__( 'To use the VK.com Sharing plugin, you\'ll need to install and activate <a href="%1$s">Jetpack</a> first, and <a href="%2$s">activate the Sharing module</a>.'),
+		printf(__( 'To use the Microsoft Teams Sharing plugin, you\'ll need to install and activate <a href="%1$s">Jetpack</a> first, and <a href="%2$s">activate the Sharing module</a>.'),
 		'plugin-install.php?tab=search&s=jetpack&plugin-search-input=Search+Plugins',
 		'admin.php?page=jetpack_modules',
-		'vkjp'
+		'mstjp'
 		);
 		echo '</p></div>';
 	}
 
 }
 // And boom.
-Vkcom_Button::get_instance();
+MSTeams_Button::get_instance();
