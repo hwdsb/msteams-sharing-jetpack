@@ -31,12 +31,12 @@ class Share_MSTeams extends Share_Twitter {
 ?>
 <style type="text/css">
 	.sd-social-icon-text li.share-msteams a.sd-button > span {
-		background: url('<?php echo plugins_url( 'teams-icon.png', __FILE__ ); ?>') no-repeat;
+		background: url('<?php echo plugins_url( 'logo_MSTeams.svg', __FILE__ ); ?>') no-repeat;
 		padding-left: 20px;
 	}
 
 	.sd-social-icon .sd-content ul li[class*='share-'].share-msteams a.sd-button {
-		background: #2B587A url('<?php echo plugins_url( 'teams-icon-only.png', __FILE__ ); ?>') no-repeat;
+		background: #2B587A url('<?php echo plugins_url( 'logo_MSTeams.svg', __FILE__ ); ?>') no-repeat;
 		color: #fff !important;
 		padding: 16px;
 		top: 12px;
