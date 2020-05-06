@@ -36,7 +36,7 @@ class Share_MSTeams extends Share_Twitter {
 	}
 
 	.sd-social-icon .sd-content ul li[class*='share-'].share-msteams a.sd-button {
-		background: #2B587A url('<?php echo plugins_url( 'logo_MSTeams.svg', __FILE__ ); ?>') no-repeat;
+		background: #ffffff url('<?php echo plugins_url( 'logo_MSTeams.svg', __FILE__ ); ?>') no-repeat;
 		color: #fff !important;
 		padding: 16px;
 		top: 12px;
